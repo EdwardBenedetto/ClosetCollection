@@ -1,0 +1,87 @@
+
+<%- include('partials/header') -%>
+<div class="container" >
+  <div class="navbar bg-base-100">
+   
+  </div>
+  <div class="row mt-5">
+      <div class="col-6">
+
+      
+
+        
+           <h1 class="normal-case text-xl">Hello, <%= user.userName %>! Here is your collection:</h1>
+          <h1 class="normal-case text-xl" style="color: white">WWW </h1>
+
+        <form action="/q" method="POST" class="search-form" id="searchForm">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchInput" value="<%= search %>"  placeholder="Search">
+            <div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
+          </div>
+          </form>
+     
+  
+          <div class="mt-5">
+            <h1 class="normal-case text-xl">Add style:</h1>
+            <h1 class="normal-case text-xl" style="color: white">WWW </h1>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <input type="text" class="form-control" id="desc" name="desc">
+              </div>
+                            <div class="mb-3">
+                <label for="year" class="form-label">Year</label>
+                <input type="text" class="form-control" id="year" name="year">
+            </div>
+                     <div class="mb-3">
+            <label for="title" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price">
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Asking price</label>
+          <input type="text" class="form-control" id="price" name="askPrice">
+      </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Purchase Date</label>
+          <input type="text" class="form-control" id="purchasedAt" name="purchasedAt">
+      </div>
+    
+        <div class="mb-3">
+          <label for="title" class="form-label">Notes</label>
+          <input type="text" class="form-control" id="notes" name="notes">
+      </div>
+        
+
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+      </div>
+      
+      <div class="col-6">
+        <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="card card-body w-50 bg-base-50 shadow-xl">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+              <h5><%= posts[i].title%></h5>
+            </a>
+          </li>
+        <% } %>
+        </ul>
+        
+      </div> 
+   
+    </div>
+   
+  </div>
+
+</div>
+<%- include('partials/footer') -%>

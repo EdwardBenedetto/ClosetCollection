@@ -1,0 +1,31 @@
+<%- include('partials/header') -%>
+
+
+
+    <div class="space-evenly ">
+      <ul class="row mt-5">
+        <h1 class="mb-5 text-5xl font-bold">Users' Closet Items for Sale</h1>
+        <% for(var i=0; i<posts.length; i++) {%>
+          <% if (posts[i].askPrice) { %>
+          <li class="card card-body w-96 bg-base-100 shadow-xl">
+            
+            <a href="/post/<%= posts[i]._id%>">
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" style="margin-bottom: 20px;">Asking $<%= posts[i].askPrice%> - Make An Offer</button>
+              </div>
+             
+        
+                        <img class="img-fluid" src="<%= posts[i].image%>">
+                        <h2 class="card-title"><%= posts[i].title%></h2>
+            </a>
+          </li>
+      
+        <% } %>
+        
+        <% } %>
+        </ul>
+
+    </div>
+  </div>  
+
+<%- include('partials/footer') -%>
