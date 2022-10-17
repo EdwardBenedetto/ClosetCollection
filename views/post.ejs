@@ -10,12 +10,11 @@
       <div class="card-body">
         <h2 class="card-title"><%= post.title %></h2>
         <%if(post.desc){ %><p>Description: <%= post.desc %></p><%}%>
-        <%if(post.year){ %><p>Year: <%= post.year %></p><%}%>
-        <%if(post.price){ %><p>Price: <%= post.price %></p><%}%>
-        <%if(post.askPrice){ %><p>Asking price: <%= post.askPrice %></p><%}%>
+        <%if(post.price){ %><p>Price: $<%= post.price %></p><%}%>
+        <%if(post.askPrice){ %><p>Asking price: $<%= post.askPrice %></p><%}%>
         <%if(post.notes){ %><p>Notes: <%= post.notes %></p><%}%>
         <%if(post.purchaseDate){ %><p>Purchase Date: <%= post.purchaseDate %></p><%}%>
-        <%if(post.createdAt){ %><p>Created At: <%= post.createdAt %></p><%}%>
+        <%if(post.createdAt){ %><p>Created On: <%= post.createdAt.toString().slice(4,16) %></p><%}%>
         </div>
 
       <div class="flex items-center" style = "display: flex; align-items: center; justify-content: center">
@@ -52,10 +51,10 @@
     <h2 class="card-title">Market Comparison</h2>
     <p>Based on scraping data from <%= data.results %> similar recently sold items:</p>
   
-    <p>Similar products are selling at an average of $<%= data.average_price %></p>
-    <p>Similar products are selling at a median cost of $<%= data.median_price %></p>
-    <p>The minimum selling price was $<%= data.min_price %></p>
-    <p>The maximum selling price was $<%= data.max_price %></p>
+    <p>Similar products are selling at an average of $<%= data.average_price.toFixed(2) %></p>
+    <p>Similar products are selling at a median cost of $<%= data.median_price.toFixed(2) %></p>
+    <p>The minimum selling price was $<%= data.min_price.toFixed(2) %></p>
+    <p>The maximum selling price was $<%= data.max_price.toFixed(2) %></p>
     
     
 </div>
@@ -78,7 +77,7 @@
 <ul>
   <% for(var i=0; i<comments.length; i++) {%>
     <li class="col-6 justify-content-between mt-5"></li>
-<%= comments[i].createdBy%>: "<%= comments[i].comment%>" (<%= comments[i].createdAt%>)
+<%= comments[i].createdBy%>: "<%= comments[i].comment%>" [<%= comments[i].createdAt.toString().slice(4,16)%>]
 <% if(post.user == user.id) {%>
   <form
   action="/comment/deleteComment/<%= post.id%>/<%= comments[i]._id%>?_method=DELETE"
