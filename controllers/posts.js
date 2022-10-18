@@ -8,7 +8,9 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user, search: '' });
+      const sorted = await Post.find({ user: req.user.id }).sort({ price: "desc" })
+      const total = posts.reduce((sum, item)=>item.price+=sum,0)
+      res.render("profile.ejs", { posts: posts, user: req.user, total, sorted, search: '' });
     } catch (err) {
       console.log(err);
     }

@@ -1,6 +1,3 @@
-/* div {
-    border: 1px solid red;
-} */
 
 .navbar {
 color: white;
@@ -8,20 +5,72 @@ color: white;
 
 .img-fluid {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 75%;
     margin: auto;
 }
 
 .card {
     border-radius: 10px;
-    margin: 5px;
 }
 
 body {
-    font-family: 'Helvetica'
-}
+    font-family: 'Helvetica';
+  }
+
+  /* div {
+    border: 1px solid red;
+  } */
 
 .img-container {
     width: 100%;
 }
+
+
+
+details {
+    display: block;
+    width: 215px;
+      margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+details:first-child {
+  margin-left: 0;
+}
+
+details > summary {
+    list-style: none;
+  }
+
+ 
+  
+summary {
+  border: 4px solid transparent;
+  outline: none;
+  padding: 1rem;
+  display: block;
+  background: rgb(2, 2, 37);
+  color: white;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+details[open] summary,
+summary:hover {
+  color: #CCC;
+  background: #444;
+}
+
+.content {
+  padding: 10px;
+  border: 2px solid #888;
+  border-top: none;
+}
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+width: 100%;
+  }
