@@ -3,6 +3,10 @@
 color: white;
 }
 
+.navbar a:hover {
+  color: rgb(9, 71, 187);
+}
+
 .img-fluid {
     border-radius: 10px;
     width: 75%;
@@ -60,7 +64,7 @@ summary {
 details[open] summary,
 summary:hover {
   color: #CCC;
-  background: #444;
+  background: rgb(9, 71, 187);
 }
 
 .content {
