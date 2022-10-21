@@ -29,10 +29,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <div class="hero min-h-screen bg-base-200" style="background-image: url(https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
         <main class="container" >
       <div class="row justify-content-center" style="margin-top: 10%;">
                   <section class="col-6 mt-5">
-            <div style="display: block; margin: auto; text-align: center;">Add your info below to create an account and enjoy all that CollectionCloset has to offer.</div>
+            <div style="display: block; margin: auto; margin-bottom: 5%; text-align: center;">Add your info below to create an account and enjoy all that CollectionCloset has to offer.</div>
               <% if (locals.messages.errors) { %>
                   <% messages.errors.forEach( el => { %>
                       <div class="alert alert-danger"><%= el.msg %></div>
