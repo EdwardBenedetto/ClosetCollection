@@ -20,13 +20,13 @@ Enterprise fashion software (PLM) has the potential to be extremely useful to ev
 
 The main idea of this app is simple - users can add information on items of their collection of choice (costing, purchase date, brand, etc) to more easily manage their collections. Additionally, a user-created API is able to show market data (sales, min selling price, max selling price, etc) in order to allow the user to determine their product's current market value.
 
-<a href="https://ibb.co/9WHg4N5"><img src="https://i.ibb.co/ZxzXgVD/profile1.jpg" alt="profile1" border="0"></a>
+<a href="https://ibb.co/XL854nf"><img src="https://i.ibb.co/zxJ253W/1.jpg" alt="1" border="0"></a>
 
-<a href="https://ibb.co/PQMp5by"><img src="https://i.ibb.co/X8DBzdP/project3.jpg" alt="project3" border="0"></a>
+<a href="https://ibb.co/19vxCBw"><img src="https://i.ibb.co/sFmrTcM/2.jpg" alt="2" border="0"></a>
 
 Users can also offer their product up for sale. If a user gives one of their products an "asking price," it will be pushed to a public feed, which will allow other users to view and potentially buy those garments.
 
-<a href="https://ibb.co/h9sw40y"><img src="https://i.ibb.co/qjBVc6d/profile2.jpg" alt="profile2" border="0"></a>
+<a href="https://ibb.co/D8Z3sJH"><img src="https://i.ibb.co/qWvbXS3/3.jpg" alt="3" border="0"></a>
 
 ## How It's Made:
 
