@@ -50,7 +50,7 @@ Over the 100 or so hours spent working on this, I faced and overcame a number of
 
 There are a number of directions that this idea could be taken further moving forward.
 
-I could build out the "offer" function with real financial capabilities (buying, credit card processing, etc). The "buy/sell" portion of the app is simply to show my ability to create social media functions - it's secondary to the "collecting" aspect of the app. This can be added in the future if desired.
+I'd like to build out the "offer" function with real financial capabilities (buying, credit card processing, etc), likely through something like a Stripe API. 
 
 I actually prefer the minimal formatting - the app gets right to the point. However, this branding might turn away viewers who prefer a more "visual experience." It could look more desirable/professional with a React/Tailwind update.
 
