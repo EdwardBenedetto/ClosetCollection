@@ -74,7 +74,9 @@ summary:hover {
 }
 
   footer {
-    display: flex;
+       display: flex;
+    flex-grow: 1;
     justify-content: space-around;
 width: 100%;
   }
+
