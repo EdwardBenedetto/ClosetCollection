@@ -2,33 +2,38 @@
 
 
 
-    <div class="space-evenly ">
-      <ul class="row ">
-        <h1 class="mb-5 text-5xl font-bold" style="margin-top: 40px; margin-left: 30px; margin-right: 30px;">Closet Items for Sale</h1>
-       
-        <% for(var i=0; i<posts.length; i++) {%>
-          <% if (posts[i].askPrice) { %>
+  <div class="space-evenly ">
+    <ul class="row ">
+      <h1 class="mb-5 text-5xl font-bold" style="margin-top: 40px; margin-left: 30px; margin-right: 30px;">All Closet
+        Items for Sale</h1>
+
+      <% for(var i=0; i<posts.length; i++) {%>
+        <% if (posts[i].askPrice) { %>
           <li class="card card-body w-96 bg-base-100 shadow-xl" style="margin: 20px">
-            
+
             <a href="/post/<%= posts[i]._id%>">
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" style="margin-bottom: 20px;">Asking $<%= posts[i].askPrice%> - Make An Offer</button>
+                <button class="btn btn-primary" style="margin-bottom: 20px;">Asking $<%= posts[i].askPrice%></button>
               </div>
-              <h2 class="card-title"><%= posts[i].title%></h2>
-                        <div><img class="img-fluid" src="<%= posts[i].image%>"></div>
-                        
+              <h2 class="card-title">
+                <%= posts[i].title%>
+              </h2>
+              <p>Seller: <%= posts[i].userName%>
+              </p>
+              <div><img class="img-fluid" src="<%= posts[i].image%>"></div>
+
             </a>
           </li>
-  <% } %>
-        <% } %>
+          <% } %>
+            <% } %>
 
-        <% for(var i=0; i<(posts.length%2); i++) {%>
-          <li class="card card-body w-96 bg-base-100 shadow-xl" style ="visibility: hidden">
-            </li>
-        <% } %>
-        </ul>
+              <% for(var i=0; i<(posts.length%2); i++) {%>
+                <li class="card card-body w-96 bg-base-100 shadow-xl" style="visibility: hidden">
+                </li>
+                <% } %>
+    </ul>
 
-    </div>
-  </div>  
+  </div>
+  </div>
 
-<%- include('partials/footer') -%>
+  <%- include('partials/footer') -%>

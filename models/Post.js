@@ -57,12 +57,12 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  status: {
+  userName: {
     type: String,
-    default: 'public',
-    enum: ['public', 'private']}
+    require: false,
+  },
 });
-PostSchema.index({title: 'text'});
+
 
 module.exports = mongoose.model("Post", PostSchema);
 

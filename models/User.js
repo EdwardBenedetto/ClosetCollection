@@ -4,6 +4,14 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
+  profileImage: {
+    type: String,
+    default: '/images/blank-profile.png'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
   password: String,
 });
 
