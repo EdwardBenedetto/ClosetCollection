@@ -10,11 +10,19 @@
       <% for(var i=0; i<posts.length; i++) {%>
         <% if (posts[i].askPrice) { %>
           <li class="card card-body w-96 bg-base-100 shadow-xl" style="margin: 20px">
-
             <a href="/post/<%= posts[i]._id%>">
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" style="margin-bottom: 20px;">Asking $<%= posts[i].askPrice%></button>
+                <!-- <button class="btn btn-primary" style="margin-bottom: 20px;">Asking $<%= posts[i].askPrice%></button> -->
+                <form action ='/charge' method="POST">
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51M3L8iJtnAvUa5oLPwUuoVURCd6YMvywcID4rgEdWn2NX3CsvHoomPn1IIs05nHvCZlPwXGr3DQyC5f64701Ii0300JWnTSArj"
+                  data-amount = <%= posts[i].askPrice*100%> data-name =<%= posts[i].title%> data-locale="auto"></script>
+              <script>
+                  //hide default script
+                  document.getElementsByClassName('stripe-button-el')[0].style.display="none"
+              </script>
+              <button type="submit" class="btn btn-outline-dark text-white btn-lg">Purchase</button>
               </div>
+
               <h2 class="card-title">
                 <%= posts[i].title%>
               </h2>
@@ -27,7 +35,7 @@
           <% } %>
             <% } %>
 
-              <% for(var i=0; i<(posts.length%2); i++) {%>
+              <% for(var i=0; i<=4-(posts.length%4); i++) {%>
                 <li class="card card-body w-96 bg-base-100 shadow-xl" style="visibility: hidden">
                 </li>
                 <% } %>
