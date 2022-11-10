@@ -1,7 +1,5 @@
 <%- include('partials/header') -%>
 
-
-
   <div class="space-evenly ">
     <ul class="row ">
       <h1 class="mb-5 text-5xl font-bold" style="margin-top: 40px; margin-left: 30px; margin-right: 30px;">All Closet
@@ -20,9 +18,9 @@
                   <script>
                       //hide default script
                      var els = document.getElementsByClassName('stripe-button-el')
-                     for (var i in els){
-                      els[i].style.display="none"
-                     }
+                    for (var i in els) {
+                      els[i].style.display = "none"
+                    }
                   </script>
                   <button type="submit" class="btn btn-primary">Buy: $<%= posts[i].askPrice%></button>
               </div>
