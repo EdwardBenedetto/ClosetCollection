@@ -30,13 +30,17 @@ Users can also offer their product up for sale. If a user gives one of their pro
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Express, Node, Tailwind, EJS, MongoDB, Cloudinary, React
+**Tech used:** HTML, CSS, JavaScript, Express, Node, Tailwind, EJS, MongoDB, Cloudinary, React, Stripe API
 
-This program, at its core, is a fairly standard CRUD app. The idea is that the user inputs data (texts/images) into a form, which then shows up in their personal collection. They can manage privately, or publically share with others on the app. There are basic social media elements as well - users can comment on others collection, and offer to purchase any "public" goods.
+This program, at its core, is a fairly standard CRUD app. The idea is that the user inputs data (texts/images) into a form, which then shows up in their personal collection. They can manage privately, or publically share with others on the app. There are basic social media elements as well - users can comment on others collection, and offer to purchase any "public" goods through a Stripe API implementation.
 
-The element of the app that I am most proud of involves a user-created eBay API found on the internet. The idea is that a user can manage their individual goods by calling on the API, which provides recent sales data for similar styles (minimum/maximum/average sales price) based on recent completed eBay auctions. The user can use this information to decide if they wish to sell the individual item, or maybe buy additional copies of that item.
+The element of the app that I am most proud of involves two API implementations: 
+
+1. User-created eBay API found on the internet. The idea is that a user can manage their individual goods by calling on the API, which provides recent sales data for similar styles (minimum/maximum/average sales price) based on recent completed eBay auctions. The user can use this information to decide if they wish to sell the individual item, or maybe buy additional copies of that item.
 
 This app focuses on apparel/fashion collections, but can easily be revised to accomodate collections of any type - the eBay API can accomodate literally anything sold on eBay, and the CRUD/social media elements don't need to be changed either.
+
+2. Stripe API - was able to use this to implement a basic payment element for goods offered for sale. This wasn't the main intention of the project, but I felt it was necessary to take it to the "next level," as this concept naturally morphs into an e-commerce idea if allowed time to expand; a payment element was logical.
 
 ## Lessons Learned:
 
@@ -44,13 +48,15 @@ Over the 100 or so hours spent working on this, I faced and overcame a number of
 
 1. The eBay API as discussed above was difficult to get working properly. I spent a fair amount of time working through issues through Postman and trial-and-error. The end result was worth it - this element of the app is truly useful. I would like to expand on this in the future, perhaps with graph visualization of the data that gets pulled from the API.
 
-2. Trial and error with Cloudinary and Tailwind, two services that I did not have a ton of experience with prior to this program. Success came down to slowing down, and reading documentation in order to overcome roadblocks here.
+2. Implementation of the Stripe API. I wanted to add in a small amount of Stripe, but not so much as to build out an entire payment backend, as this wasn't the goal of the project. I was able to implement a small amount into the project and, in doing so, was able to expand my skillset.
+
+3. Trial and error with Cloudinary and Tailwind, two services that I did not have a ton of experience with prior to this program. Success came down to slowing down, and reading documentation in order to overcome roadblocks here.
  
  ## Optimizations:
 
 There are a number of directions that this idea could be taken further moving forward.
 
-I'd like to build out the "offer" function with real financial capabilities (buying, credit card processing, etc), likely through something like a Stripe API. 
+As mentioned above, I've implemented a minimal amount of Stripe into the project. Stripe has a lot of documentation and a lot of capabilities - I could spend time building out a proper payment procedure, if desired.
 
 I actually prefer the minimal formatting - the app gets right to the point. However, this branding might turn away viewers who prefer a more "visual experience." It could look more desirable/professional with a React/Tailwind update.
 
