@@ -36,9 +36,7 @@ This program, at its core, is a fairly standard CRUD app. The idea is that the u
 
 The element of the app that I am most proud of involves two API implementations: 
 
-1. User-created eBay API found on the internet. The idea is that a user can manage their individual goods by calling on the API, which provides recent sales data for similar styles (minimum/maximum/average sales price) based on recent completed eBay auctions. The user can use this information to decide if they wish to sell the individual item, or maybe buy additional copies of that item.
-
-This app focuses on apparel/fashion collections, but can easily be revised to accomodate collections of any type - the eBay API can accomodate literally anything sold on eBay, and the CRUD/social media elements don't need to be changed either.
+1. User-created eBay API found on the internet. The idea is that a user can manage their individual goods by calling on the API, which provides recent sales data for similar styles (minimum/maximum/average sales price) based on recent completed eBay auctions. The user can use this information to decide if they wish to sell the individual item, or maybe buy additional copies of that item. This app focuses on apparel/fashion collections, but can easily be revised to accomodate collections of any type - the eBay API can accomodate literally anything sold on eBay, and the CRUD/social media elements don't need to be changed either.
 
 2. Stripe API - was able to use this to implement a basic payment element for goods offered for sale. This wasn't the main intention of the project, but I felt it was necessary to take it to the "next level," as this concept naturally morphs into an e-commerce idea if allowed time to expand; a payment element was logical.
 
