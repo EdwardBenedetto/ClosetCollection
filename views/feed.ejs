@@ -14,8 +14,9 @@
                 <form action='/charge' method="POST">
                   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_test_51M3L8iJtnAvUa5oLPwUuoVURCd6YMvywcID4rgEdWn2NX3CsvHoomPn1IIs05nHvCZlPwXGr3DQyC5f64701Ii0300JWnTSArj"
-                    data-amount=<%=posts[i].askPrice*100%> data - name = <%= posts[i].title %> data - locale="auto" ></script>
+                     data-locale="auto" ></script>
                   <script>
+
                       //hide default script
                      var els = document.getElementsByClassName('stripe-button-el')
                     for (var i in els) {
