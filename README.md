@@ -54,8 +54,8 @@ Over the 100 or so hours spent working on this, I faced and overcame a number of
 
 There are a number of directions that this idea could be taken further moving forward.
 
-As mentioned above, I've implemented a minimal amount of Stripe into the project. Stripe has a lot of documentation and a lot of capabilities - I could spend time building out a proper payment procedure, if desired.
+I've implemented a minimal amount of Stripe into the project. Stripe has a lot of documentation and a lot of capabilities - I could spend time building out a proper payment procedure, if desired.
 
 I actually prefer the minimal formatting - the app gets right to the point. However, this branding might turn away viewers who prefer a more "visual experience." It could look more desirable/professional with a React/Tailwind update.
 
-As mentioned above, I'm really proud of getting the eBay API to work with relevant data - it's truly the most useful part of the app. I'd like to expand on the data pulled from the API in the future - perhaps graph the data pulled, or something similar.
+I'm really proud of getting the eBay API to work with relevant data - it's truly the most useful part of the app. I'd like to expand on the data pulled from the API in the future - perhaps graph the data pulled, or something similar.
