@@ -44,14 +44,11 @@ module.exports = {
     }
   },
 
-
-
   marketInfo: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      
-    
-        const response = await fetch("https://ebay-sold-items-api.herokuapp.com/findCompletedItems", {
+
+      const response = await fetch("https://ebay-sold-items-api.herokuapp.com/findCompletedItems", {
   method: "post",
   headers: {
        'Content-Type': 'application/json'
@@ -65,23 +62,11 @@ module.exports = {
   })
 });
 
-const data = await response.json();
-
-   console.log(`Style average cost is $${data.average_price}`);
-   console.log(`Style median cost is $${data.median_price}`)
-        console.log(`Style min cost is $${data.min_price}`)
-        console.log(`Style max cost is $${data.max_price}`)
-        console.log(`Pulled from the results of ${data.results} previously sold items`)
-
-      // res.render("post.ejs", { post: post, user: req.user});
-      
+const data = await response.json();      
     } catch (err) {
       console.log(err);
     }
   },
-
-
-
 
     getPost: async (req, res) => {
     try {
