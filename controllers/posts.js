@@ -100,6 +100,7 @@ const data = await response.json();
 
       await Post.create({
         title: req.body.title,
+        desc: req.body.desc,
         image: result.secure_url,
         cloudinaryId: result.public_id,
         type: req.body.type,
