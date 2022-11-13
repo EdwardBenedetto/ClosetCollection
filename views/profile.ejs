@@ -4,13 +4,19 @@
 
 
     <div class="col-12" style=" margin-top: 20px;">
-      <h1 class="normal-case text-xl" style="margin-bottom: 10px; margin-left: 20px;">
-        <%= user.userName %>
+      <div class = "profileCard card-body shadow-xl">
+      <div class = 'userDisplay'>
+        <img src="<%= user.profileImage %>"/>
+        <div>
+      <h1 class="normal-case text-xl">
+       <%= user.userName %>
       </h1>
       <p>Join date: <%= user.createdAt.toString().slice(4,16) %>
       </p>
       <div><button type="button" class="btn-secondary" id="edit-profile-button">Edit Profile</button></div>
-
+    </div>
+    </div>
+    </div>
       <div style="display: flex; margin-left: 20px">
         <details>
           <summary>ADD PRODUCT</summary>

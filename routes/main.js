@@ -1,4 +1,5 @@
 const express = require("express");
+const upload = require("../middleware/multer");
 const router = express.Router();
 const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
@@ -16,6 +17,6 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/financials", postsController.getFinancials);
 router.get("/signup", authController.getSignup);
-router.post("/signup", authController.postSignup);
+router.post("/signup", upload.single("file"), authController.postSignup);
 
 module.exports = router;

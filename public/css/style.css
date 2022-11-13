@@ -20,9 +20,24 @@ body {
   font-family: 'Helvetica';
 }
 
-/* div {
+div {
     border: 1px solid red;
-  }  */
+  } 
+
+.userDisplay {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+
+.profileImage {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profileCard {
+  width: 25%;
+}
 
 .img-container {
   width: 100%;
